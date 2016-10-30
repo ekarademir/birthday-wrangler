@@ -1,4 +1,5 @@
 = URGENT
+
 == Line parsing
 * split with dash, left is year
 * split right of above operation with comma and left is the full name
@@ -11,5 +12,6 @@
 
 
 = NOT URGENT
+
 == Updating data
 * Need to check if page is modified. If so fetch again.
