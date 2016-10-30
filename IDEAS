@@ -1,6 +1,0 @@
-== Getting Births from the page ==
-1) Download the page with requests
-2) filter the following content with reqular expression [...]Births[...]<ul>[CONTENT]</ul>
-3) store every <li> into a list
-4) map reduce every item so that all anchors are removed
-5) store every item
