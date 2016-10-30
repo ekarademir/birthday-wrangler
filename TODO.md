@@ -1,14 +1,12 @@
 # URGENT
 
-## Line parsing
-* split with dash, left is year
-* split right of above operation with comma and left is the full name
-* remaining right is nationality and occupation
-* We might try recognising most of the nationalities with suffixes
-
 ## Crawling Date Pages
 * Generate dates and fetch pages one by one
 * If there is a max execution time then try cronjobs
+
+## Line parsing
+* Use CIA list for nationality parsing
+* For now every line without expected format is ignored
 
 
 # NOT URGENT
