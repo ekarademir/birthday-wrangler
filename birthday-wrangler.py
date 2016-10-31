@@ -3,7 +3,7 @@ import re
 import codecs
 
 def getbdays(month=3, day=6):
-    """Exctrects the Births section from the saved page
+    """Exctrats the Births section from the saved page
 
     Keyword Arguments:
     month -- Month. (default 3 or March)
@@ -39,9 +39,6 @@ def getbdays(month=3, day=6):
     # Clean up the died year
     replace_pattern = u'\(d.*?\)'
     births_items = map(lambda x: re.sub(replace_pattern, u'\x20',x), births_items)
-
-    # Parse all the lines
-    #births_items = map(lambda x: parseline(x, month, day), births_items)
 
     return births_items
 
@@ -84,7 +81,7 @@ def fetchpage(month=3, day=6):
     f.close()
 
 def fetchmonth(month):
-    """Fetches mone month from wikipedia
+    """Fetches one month from wikipedia
 
     Arguments
     month -- is an integer value for the month (1 to 12)
@@ -197,11 +194,11 @@ def dicttocsv(d):
     return csvstring
 
 if __name__ == "__main__":
-    # USE THE SCRIPT BY FOLLOWING HERE
+    # USE THE SCRIPT BY FOLLOWING THESE LINES
     # Uncomment the following to gather all wikipedia date pages
     #fetchallpages()
     # Uncomment the following line to parse all bdays
-    getallbdays()
+    #getallbdays()
 
     #USED FOR DEBUGGING ######################################################
     #bdays = getbdays(3,6)
