@@ -1,5 +1,6 @@
 import requests
 import re
+import codecs
 
 def fetchbdays(month=3, day=6):
     """Fetches the wikipedia page for given month and day
@@ -11,21 +12,21 @@ def fetchbdays(month=3, day=6):
 
     url_head = 'https://en.wikipedia.org/wiki/'
     months = {
-        1 : 'January',
-        2 : 'February',
-        3 : 'March',
-        4 : 'April',
-        5 : 'May',
-        6 : 'June',
-        7 : 'July',
-        8 : 'August',
-        9 : 'September',
-        10 : 'October',
-        11 : 'November',
-        12 : 'December'
+        1 : u'January',
+        2 : u'February',
+        3 : u'March',
+        4 : u'April',
+        5 : u'May',
+        6 : u'June',
+        7 : u'July',
+        8 : u'August',
+        9 : u'September',
+        10 : u'October',
+        11 : u'November',
+        12 : u'December'
     }
 
-    wikipage = url_head + months[month] + '_' + str(day)
+    wikipage = url_head + months[month] + '_' + unicode(day)
 
     # Fetch the contents of the date page
     r = requests.get(wikipage)
@@ -37,8 +38,6 @@ def fetchbdays(month=3, day=6):
     r.encoding = 'utf-8'
     births_section = re.search(births_pattern, r.text.replace('\n',u'\x20')
                                                 .replace(u'\u2013', u'-'))
-    #births_section = re.search(births_pattern, r.content.replace('\n','\00'))
-                                                #.replace('\xe2\x80\x93','-'))
 
     # After seperating out the births section we can unflatten it again using end tags of li
     births_section = births_section.group()
@@ -61,8 +60,64 @@ def fetchbdays(month=3, day=6):
 
     return births_items
 
-def fetchall(arg):
-    pass
+def fetchpage(month=3, day=6):
+    """Fetches the wikipedia page for given month and day
+
+    Keyword Arguments:
+    month -- Month. (default 3 or March)
+    day   -- Day. (default 6)
+    """
+    file_head = './data/data-raw'
+    url_head = 'https://en.wikipedia.org/wiki/'
+    months = {
+        1 : u'January',
+        2 : u'February',
+        3 : u'March',
+        4 : u'April',
+        5 : u'May',
+        6 : u'June',
+        7 : u'July',
+        8 : u'August',
+        9 : u'September',
+        10 : u'October',
+        11 : u'November',
+        12 : u'December'
+    }
+
+    wikipage = url_head + months[month] + u'_' + unicode(day)
+    filename = file_head + u'-' + unicode(month) + u'-' + unicode(day) + u'.dat'
+
+    # Fetch the contents of the date page
+    print wikipage.encode('utf-8')
+    r = requests.get(wikipage)
+    r.encoding = 'utf-8'
+
+    # Open a unicode stream and dump the contents
+    f = codecs.open(filename, 'w', 'utf_8')
+    f.write(r.text.replace('\n',u'\x20')
+                  .replace(u'\u2013', u'-'))
+    f.close()
+
+def fetchmonth(month):
+    """Fetches mone month from wikipedia
+
+    Arguments
+    month -- is an integer value for the month (1 to 12)
+    """
+
+    months = [31, 29, 31,   # January, February, March
+              30, 31, 20,   # April, May, June
+              31, 31, 30,   # July, August, September
+              31, 30, 31]   # October, November, December
+    days = range(1,months[month-1]+1)
+
+    map(lambda x: fetchpage(month,x), days)
+
+def fetchallpages():
+    """Fetches all wikipedia date pages one by one saves them on the disk"""
+
+    months = range(1,13)
+    map(fetchmonth, months)
 
 def parseline(line, month, day):
     """Parse the line and return a dictionary for the data.
@@ -70,7 +125,7 @@ def parseline(line, month, day):
 
     # For now lines without proper format are ignored
     if not u',' in line and u'-' in line:
-        return {}
+        raise ValueError
 
 
     # left from the dash is year
@@ -80,9 +135,7 @@ def parseline(line, month, day):
     # from the remaining, left of FIRST comma is the full name
     #temp = re.sub(temp[1])
     temp = temp[1].strip().split(u',',1)
-    fullname = temp[0]
-    print '"'+fullname+'"'
-    fullname = re.search(u'(\w+ )+\w+',temp[0]).group()
+    fullname = re.search(u'(\w+ )+\w+',temp[0].strip()).groups()
 
     # parse the nationality and occupation
     rest = re.findall(u'[A-Za-z]+',temp[1])
@@ -103,28 +156,23 @@ def parseline(line, month, day):
     }
 
 if __name__ == "__main__":
-    bdays = fetchbdays(3,6)
-    print len(bdays)
+    # USE THE SCRIPT BY FOLLOWING HERE
+    # Uncomment the following to gather all wikipedia date pages
+    #fetchallpages()
 
-    bi = 0
+    ########################################################
+    #bdays = fetchbdays(3,6)
+    #print len(bdays)
 
-    print bdays[bi].strip().encode('utf-8')
-
-    cform = [hex(ord(x)) + ' ' for x in bdays[bi]]
-
+    #bi = 0
+    #print bdays[bi].strip().encode('utf-8')
+    #cform = [hex(ord(x)) + ' ' for x in bdays[bi]]
     #print cform
+    #print parseline(bdays[bi], 3, 6)
 
     #for s in bdays:
     #    print s.strip().encode('utf-8')
-
-    print parseline(bdays[bi], 3, 6)
-
-    """
-    for i in range(len(bdays)):
-        try:
-            parseline(unicode(bdays[i]), 3, 6)
-        except Exception as e:
-            print bdays[i]
-            print i
-            raise
-    """
+    #    try:
+    #        parseline(s, 3, 6)
+    #    except:
+    #        print s.strip().encode('utf-8')

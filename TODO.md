@@ -1,12 +1,13 @@
 # URGENT
 
-## Crawling Date Pages
-* Generate dates and fetch pages one by one
-* If there is a max execution time then try cronjobs
+* List all unparsed lines into a file
 
 ## Line parsing
 * Use CIA list for nationality parsing
-* For now every line without expected format is ignored
+* Split everything into words by ignoring all other marks then mark the word
+  order of the nationality block (there might be few words for nationality.)
+  Then, everything before nationality id name, everything after it is occupation.
+* If there is no nationality found everything is name.
 
 
 # NOT URGENT
