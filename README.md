@@ -8,7 +8,9 @@ Built on Python 2.7
 # Issues
 * For now, there is a very crude extraction method for names, nationalities
   and occupations. Each line should be in a certain format or it will be ignored.
+  Can't extract Albert Einstein :/
 * There is no wrapper. So use the main function to run the commands.
+* Assumes everything is found and existing.
 
 # Usage
 In the main function,
