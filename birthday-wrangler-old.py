@@ -12,7 +12,7 @@ def getbdays(month=3, day=6):
 
     # Read page contents from file
     file_head = u'./data/data-raw'
-    filename = file_head + u'-' + str(month) + u'-' + str(day) + u'.dat'
+    filename = file_head + u'-' + unicode(month) + u'-' + unicode(day) + u'.dat'
 
     # Read the content in unicode
     f = codecs.open(filename, 'r', 'utf-8')
@@ -32,18 +32,15 @@ def getbdays(month=3, day=6):
     items_pattern = u'<li>.*'
     births_items = re.findall(items_pattern, births_section)
 
-    bi = []
-    replace_pattern1 = '<.*?>'
-    replace_pattern2 = u'\(d.*?\)'
-    for birth_item in births_items:
-        # Clean up the HTML tags
-        t = re.sub(replace_pattern1, u'',birth_item)
-        # Clean up the died year
-        t = re.sub(replace_pattern2, u'',t)
-        bi.append(t)
+    # Clean up the HTML tags
+    replace_pattern = u'<.*?>'
+    births_items = map(lambda x: re.sub(replace_pattern, u'\x20',x), births_items)
 
+    # Clean up the died year
+    replace_pattern = u'\(d.*?\)'
+    births_items = map(lambda x: re.sub(replace_pattern, u'\x20',x), births_items)
 
-    return list(bi)
+    return births_items
 
 def fetchpage(month=3, day=6):
     """Fetches the wikipedia page for given month and day
@@ -69,13 +66,11 @@ def fetchpage(month=3, day=6):
         12 : u'December'
     }
 
-    print("Fetching Wiki Month {0} Day {1}".format(month, day))
-
-    wikipage = url_head + months[month] + u'_' + str(day)
-    filename = file_head + u'-' + str(month) + u'-' + str(day) + u'.dat'
+    wikipage = url_head + months[month] + u'_' + unicode(day)
+    filename = file_head + u'-' + unicode(month) + u'-' + unicode(day) + u'.dat'
 
     # Fetch the contents of the date page
-    print(wikipage.encode('utf-8'))
+    print wikipage.encode('utf-8')
     r = requests.get(wikipage)
     r.encoding = 'utf-8'
 
@@ -98,19 +93,13 @@ def fetchmonth(month):
               31, 30, 31]   # October, November, December
     days = range(1,months[month-1]+1)
 
-    print("Fetching Wiki Month {0}".format(month))
-    # map(lambda x: fetchpage(month,x), days)
-    for day in days:
-        fetchpage(month,day)
+    map(lambda x: fetchpage(month,x), days)
 
 def fetchallpages():
     """Fetches all wikipedia date pages one by one saves them on the disk"""
 
     months = range(1,13)
-    print("Fetching Wiki Pages")
-    for month in months:
-        fetchmonth(month)
-    # map(fetchmonth, months)
+    map(fetchmonth, months)
 
 def parseline(line, month, day):
     """Parse the line and return a dictionary for the data.
@@ -149,17 +138,6 @@ def parseline(line, month, day):
         'occupation': occupation
     }
 
-def parseline_ml(line, month, day):
-    """Parse the line and return a dictionary for the data.
-    line must be a string."""
-
-    # For now lines without proper format are ignored
-    if not u'-' in line:
-        raise ValueError
-
-    line = re.sub(',', '', line)
-    return [k.strip().lower() for k in line.split(u'-',1)]
-
 def getallbdays():
     """Reads all the saved files and parses all birthdays. If parsing is
        unsuccessful, writes the line into a file."""
@@ -172,7 +150,6 @@ def getallbdays():
     # Open up the file to write csv
     csvfile = u'./data-wikibdays-occupations.csv'
     csvf = codecs.open(csvfile,'w','utf-8')
-    csvf.write(u'year,month,day,fullname,nationality,occupation\n')
     successes = 0
 
     months = [31, 29, 31,   # January, February, March
@@ -196,55 +173,12 @@ def getallbdays():
                 except:
                     failedlines.write(bday+u'\n')
                     fl = u"Failed: " + bday
-                    print(fl.encode('utf-8'))
+                    print fl.encode('utf-8')
                     fails = fails + 1
 
     failedlines.close()
     csvf.close()
-    print(u"Success: {0:d}, Fails: {1:d}, Total: {2:d}".format(successes, fails, successes+fails))
-
-def getallbdays_ml():
-    """Reads all the saved files and parses all birthdays. If parsing is
-       unsuccessful, writes the line into a file."""
-
-    # Open up the file to write failed lines
-    failfile = u'./data-failedlines.dat'
-    failedlines = codecs.open(failfile, 'w', 'utf-8')
-    fails = 0
-
-    # Open up the file to write csv
-    csvfile = u'./data-wikibdays-occupations.csv'
-    csvf = codecs.open(csvfile,'w','utf-8')
-    csvf.write(u'year,month,day,fullname,nationality,occupation\n')
-    successes = 0
-
-    months = [31, 29, 31,   # January, February, March
-              30, 31, 20,   # April, May, June
-              31, 31, 30,   # July, August, September
-              31, 30, 31]   # October, November, December
-    #months = [1]
-
-    # This is super inefficient but we don't need concurrency right now
-    # Iterate over all files and write the resulting data into a csv files
-    # All failed lines are also reported
-    for month in range(1, len(months)+1):
-        days = range(1,months[month-1]+1)
-        for day in days:
-            bdays = getbdays(month,day)
-            for bday in bdays:
-                try:
-                    parseline_ml(bday, month, day)
-                    # csvf.write(dicttocsv(parseline(bday, month, day)))
-                    successes = successes + 1
-                except:
-                    failedlines.write(bday+u'\n')
-                    fl = u"Failed: " + bday
-                    print(fl.encode('utf-8'))
-                    fails = fails + 1
-
-    failedlines.close()
-    csvf.close()
-    print(u"Success: {0:d}, Fails: {1:d}, Total: {2:d}".format(successes, fails, successes+fails))
+    print u"Success: {0:d}, Fails: {1:d}, Total: {2:d}".format(successes, fails, successes+fails)
 
 def dicttocsv(d):
     """Converts the bday dict to CSV string"""
@@ -262,19 +196,23 @@ def dicttocsv(d):
 if __name__ == "__main__":
     # USE THE SCRIPT BY FOLLOWING THESE LINES
     # Uncomment the following to gather all wikipedia date pages
-    # fetchallpages()
+    #fetchallpages()
     # Uncomment the following line to parse all bdays
-    # getallbdays()
-    # Uncomment the following line to parse all bdays witl ml
-    # getallbdays_ml()
+    #getallbdays()
 
     #USED FOR DEBUGGING ######################################################
-    bdays = getbdays(3,6)
-    print(len(bdays))
+    #bdays = getbdays(3,6)
+    #print len(bdays)
 
-    for s in bdays:
-       print(s.strip().encode('utf-8'))
-       try:
-           print(parseline_ml(s, 3, 6))
-       except:
-           print(s.strip().encode('utf-8'))
+    #bi = 20
+    #print bdays[bi].strip().encode('utf-8')
+    #cform = [hex(ord(x)) + ' ' for x in bdays[bi]]
+    #print cform
+    #print parseline(bdays[bi], 3, 6)
+
+    #for s in bdays:
+    #    print s.strip().encode('utf-8')
+    #    try:
+    #        parseline(s, 3, 6)
+    #    except:
+    #        print s.strip().encode('utf-8')

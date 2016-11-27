@@ -3,7 +3,11 @@ A data wrangler using Python to crawl, sift, and store birthday dates of well kn
 
 This was a project that I've done previously with PHP. Here, I develop the same project with Python. This is an exercise for me to learn about http interfacing with **requests** and text parsing.
 
-Built on Python 2.7
+* Built on Python 2.7
+* **Updated to run on Python 3.5**
+
+# Update 1
+* Implemented deep learning to guess the nationality
 
 # Issues
 * For now, there is a very crude extraction method for names, nationalities

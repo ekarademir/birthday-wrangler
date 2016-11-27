@@ -1,5 +1,4 @@
 # URGENT
-* Add header line to CSV output
 
 ## Line parsing
 * Use CIA list for nationality parsing
