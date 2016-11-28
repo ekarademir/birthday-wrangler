@@ -149,6 +149,15 @@ def parseline(line, month, day):
         'occupation': occupation
     }
 
+def is_nationality(test):
+    with open("NationalityDetectorSVM.pickle", mode='rb') as f:
+        clf = pickle.load(f)
+
+    X = np.zeros( ( 1, 3 ), dtype = np.int16 )
+    X[0, 0:3] = np.array( [ord(x) for x in test[-3:]] )
+
+    return bool(clf.predict(X))
+
 def parseline_ml(line, month, day):
     """Parse the line and return a dictionary for the data.
     line must be a string."""

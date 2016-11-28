@@ -7,7 +7,7 @@ This was a project that I've done previously with PHP. Here, I develop the same 
 * **Updated to run on Python 3.5**
 
 # Update 1
-* Implemented **deep learning** to guess the nationality
+* Implemented **machine learning** to guess the nationality but first looks at the nationality table.
 
 # Issues
 * For now, there is a very crude extraction method for names, nationalities
