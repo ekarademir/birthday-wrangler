@@ -5,14 +5,19 @@ American
 Andorran
 Angolan
 Antiguans
+Antiguan
 Argentinean
+Argentinian
+Argentine
 Armenian
 Australian
 Austrian
+Assyrian
 Azerbaijani
 Bahamian
 Bahraini
 Bangladeshi
+Bangladesh
 Barbadian
 Barbudans
 Batswana
@@ -21,6 +26,7 @@ Belgian
 Belizean
 Beninese
 Bhutanese
+Bohemian
 Bolivian
 Bosnian
 Brazilian
@@ -28,13 +34,18 @@ British
 Bruneian
 Bulgarian
 Burkinabe
+Burkinabé
 Burmese
 Burundian
+Byzantine
 Cambodian
 Cameroonian
+Cameroon
 Canadian
-Cape Verdean
-Central African
+CapeVerdean
+Catalan
+Caribbean
+CentralAfrican
 Chadian
 Chilean
 Chinese
@@ -42,9 +53,10 @@ Colombian
 Comoran
 Congolese
 Congolese
-Costa Rican
+CostaRican
 Croatian
 Cuban
+Curaçaoan
 Cypriot
 Czech
 Danish
@@ -54,22 +66,26 @@ Dominican
 Dutch
 Dutchman
 Dutchwoman
-East Timorese
+EastTimorese
 Ecuadorean
 Egyptian
 Emirian
-Equatorial Guinean
+Emirati
+English
+EquatorialGuinean
 Eritrean
 Estonian
 Ethiopian
 Fijian
 Filipino
 Finnish
+Flemish
 French
 Gabonese
 Gambian
 Georgian
 German
+Gibraltarian
 Ghanaian
 Greek
 Grenadian
@@ -79,6 +95,7 @@ Guinean
 Guyanese
 Haitian
 Herzegovinian
+HongKong
 Honduran
 Hungarian
 I-Kiribati
@@ -90,15 +107,19 @@ Iraqi
 Irish
 Irish
 Israeli
+Icelandic
 Italian
 Ivorian
 Jamaican
 Japanese
 Jordanian
 Kazakhstani
+Kazakh
 Kenyan
 Kittian and Nevisian
+Korean
 Kuwaiti
+Kurdish
 Kyrgyz
 Laotian
 Latvian
@@ -113,6 +134,7 @@ Malagasy
 Malawian
 Malaysian
 Maldivan
+Maldivian
 Malian
 Maltese
 Marshallese
@@ -131,15 +153,17 @@ Namibian
 Nauruan
 Nepalese
 Netherlander
-New Zealander
+NewZealander
+NewZealand
 Ni-Vanuatu
 Nicaraguan
 Nigerian
 Nigerien
-North Korean
-Northern Irish
+NorthKorean
+NorthernIrish
 Norwegian
 Omani
+Ottoman
 Pakistani
 Palauan
 Panamanian
@@ -148,11 +172,13 @@ Paraguayan
 Peruvian
 Polish
 Portuguese
+Prussian
 Qatari
+Roman
 Romanian
 Russian
 Rwandan
-Saint Lucian
+SaintLucian
 Salvadoran
 Samoan
 San Marinese
@@ -164,14 +190,16 @@ Serbian
 Seychellois
 Sierra Leonean
 Singaporean
+Slovak
 Slovakian
 Slovenian
 Solomon Islander
 Somali
-South African
-South Korean
+Somalian
+SouthAfrican
+SouthKorean
 Spanish
-Sri Lankan
+SriLankan
 Sudanese
 Surinamer
 Swazi
@@ -185,6 +213,7 @@ Thai
 Togolese
 Tongan
 Trinidadian or Tobagonian
+Trinidadian
 Tunisian
 Turkish
 Tuvaluan
@@ -194,6 +223,7 @@ Uruguayan
 Uzbekistani
 Venezuelan
 Vietnamese
+Vincentian
 Welsh
 Welsh
 Yemenite

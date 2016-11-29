@@ -1,11 +1,8 @@
 # URGENT
 
 ## Line parsing
-* Use CIA list for nationality parsing
-* Split everything into words by ignoring all punctuation. Then mark the word
-  order of the nationality block (there might be few words defining nationality.)
-  Then, everything before nationality is name, everything after is occupation.
-* If there is no nationality found everything is name.
+* No typo handling is being done
+* "Royalty of Country" cases are not handled
 
 
 # NOT URGENT

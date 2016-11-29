@@ -1,6 +1,6 @@
-import requests
-import re
-import codecs
+import requests, re, codecs, pickle
+import numpy as np
+from functools import reduce
 
 def getbdays(month=3, day=6):
     """Exctrats the Births section from the saved page
@@ -149,7 +149,24 @@ def parseline(line, month, day):
         'occupation': occupation
     }
 
-def is_nationality(test):
+def guess_nationality(test):
+    """Guess the unknown nationality with a trained Support Vector Machine"""
+
+    # SVM is trained with words longer than 3 letters
+    if len(test) < 3:
+        return False
+
+    # We have a list of false positives.
+    false_positives = ["politician", "comedian", "magician", "musician",
+                       "pakistan", "eli", "hasan"]
+
+    # ending with -an is false positive
+    if test[-2:] == "an":
+        return False
+
+    if test in false_positives:
+        return False
+
     with open("NationalityDetectorSVM.pickle", mode='rb') as f:
         clf = pickle.load(f)
 
@@ -157,6 +174,101 @@ def is_nationality(test):
     X[0, 0:3] = np.array( [ord(x) for x in test[-3:]] )
 
     return bool(clf.predict(X))
+
+def is_nationality(test):
+    """Test id a word is a nationality adjective"""
+
+    with codecs.open("nationalities.txt", "r", "utf-8") as f:
+        nationalities = list(map(lambda x: x.strip().lower(), f.readlines()))
+
+    # First check the list. If not guess.
+    if test in nationalities:
+        return True
+    else:
+        return False#guess_nationality(test)
+
+def occupations(occupationpart):
+    """Parses occupations"""
+
+    # clean up paranthesis parts
+    occupationpart = re.sub('\(.+?\)', '', occupationpart)
+
+    # first split by "and" this will sort out: a,b, and c
+    occlist = [x.strip() for x in occupationpart.split("and")]
+
+    # then split from comma and combine everything
+    occlist = list(reduce(lambda a,x: a + x.split(","), occlist, []))
+
+    # finally clean up empty list items and strip the end spaces
+    occlist = list(map(lambda x: x.strip(), filter(lambda x: x != '', occlist)))
+
+    return occlist
+
+
+def parse_name_nationality_occupation(rest):
+
+    twowordnats = {
+                    "cape verdean":"capeverdean",
+                    "central african": "centralafrican",
+                    "east timorese": "easttimorese",
+                    "equatorial guinean": "equatorialguinean",
+                    "new zealander": "newzealander",
+                    "new zealand": "newzealand",
+                    "north korean": "northkorean",
+                    "south korean": "southkorean",
+                    "northern irish": "northernirish",
+                    "south african": "southafrican",
+                    "sri lankan": "srilankan",
+                    "hong kong": "hongkong",
+                    "saint lucian": "saintlucian",
+                    "costa rican": "costarican",
+                  }
+
+    for key, value in twowordnats.items():
+        rest = rest.replace(key, value)
+    # print(rest)
+    tokens = rest.split(' ')
+    tokens = list(reduce(lambda a,x: a + x.split('-'), tokens, []))
+    #test for nationality
+    nats = [is_nationality(x) for x in tokens]
+    # print(nats)
+    # find the order of the first nationality token
+    natindex = -1
+    natcount = 0
+    for i in range(len(nats)):
+        if nats[i]:
+            natindex = i
+            natcount = natcount + 1
+        # handle double nationality
+        if natcount == 2:
+            break
+
+    # if no nationality found return None
+    if natindex == -1:
+        return rest, None, None, None
+
+    # if singl e nationality, then behave as normal return the expected list
+    if natcount == 1:
+        nationality = tokens[natindex]
+        # where is the nationality in the text?
+        natindex = rest.find(nationality)
+
+        # everything before nationality as name, after as occupation
+        name = re.sub(',', '', rest[:natindex]).strip()
+        occupation = rest[(natindex + len(nationality)):].strip()
+        return name, nationality, False, occupations(occupation)
+
+    # if double nationality, then re hyphen the nationality
+    elif natcount == 2:
+        # print("Double")
+        natindex = natindex - 1
+        nationality = "-".join(tokens[natindex:natindex+2])
+        natindex = rest.find(nationality)
+        name = re.sub(',', '', rest[:natindex]).strip()
+        occupation = rest[(natindex + len(nationality)):].strip()
+        return name, nationality, True, occupations(occupation)
+    else:
+        return rest, None, None, None
 
 def parseline_ml(line, month, day):
     """Parse the line and return a dictionary for the data.
@@ -166,8 +278,24 @@ def parseline_ml(line, month, day):
     if not u'-' in line:
         raise ValueError
 
-    line = re.sub(',', '', line)
-    return [k.strip().lower() for k in line.split(u'-',1)]
+    # line = re.sub(',', '', line)
+
+    # Split from date dash
+    line = [k.strip().lower() for k in line.split(u'-',1)]
+
+    year = int(line[0])
+    fullname, nationality, double_nationality, occupation = parse_name_nationality_occupation(line[1])
+
+    return {
+        'year': year,
+        'month': month,
+        'day': day,
+        'fullname': fullname,
+        'nationality': nationality,
+        'double_nationality': double_nationality,
+        'occupation': occupation
+    }
+    # return parse_name_nationality_occupation(line[1])
 
 def getallbdays():
     """Reads all the saved files and parses all birthdays. If parsing is
@@ -217,14 +345,14 @@ def getallbdays_ml():
        unsuccessful, writes the line into a file."""
 
     # Open up the file to write failed lines
-    failfile = u'./data-failedlines.dat'
+    failfile = u'./data-failedlines-v2.dat'
     failedlines = codecs.open(failfile, 'w', 'utf-8')
     fails = 0
 
     # Open up the file to write csv
-    csvfile = u'./data-wikibdays-occupations.csv'
+    csvfile = u'./data-wikibdays-occupations-v2.csv'
     csvf = codecs.open(csvfile,'w','utf-8')
-    csvf.write(u'year,month,day,fullname,nationality,occupation\n')
+    csvf.write(u'i_year,i_month,i_day,s_fullname,s_nationality,b_double_nationality,s_occupation\n')
     successes = 0
 
     months = [31, 29, 31,   # January, February, March
@@ -242,13 +370,23 @@ def getallbdays_ml():
             bdays = getbdays(month,day)
             for bday in bdays:
                 try:
-                    parseline_ml(bday, month, day)
-                    # csvf.write(dicttocsv(parseline(bday, month, day)))
+                    # parseline_ml(bday, month, day)
+                    csvf.write(dicttocsv_ml(parseline_ml(bday, month, day)))
                     successes = successes + 1
-                except:
-                    failedlines.write(bday+u'\n')
+                except TypeError:
+                    failedlines.write(bday+' None TypeError'+u'\n')
                     fl = u"Failed: " + bday
-                    print(fl.encode('utf-8'))
+                    print(fl.encode('utf-8'), 'Type Error')
+                    fails = fails + 1
+                except ValueError:
+                    failedlines.write(bday+' ValueError'+u'\n')
+                    fl = u"Failed: " + bday
+                    print(fl.encode('utf-8'), 'Value Error')
+                    fails = fails + 1
+                except:
+                    failedlines.write(bday+' Unknown Error'+u'\n')
+                    fl = u"Failed: " + bday
+                    print(fl.encode('utf-8'), 'Unknown Error')
                     fails = fails + 1
 
     failedlines.close()
@@ -268,22 +406,41 @@ def dicttocsv(d):
         csvstring = csvstring + line
     return csvstring
 
+def dicttocsv_ml(d):
+    """Converts the bday dict to CSV string"""
+    csvstring = u""
+    for occ in d['occupation']:
+        line = u"{0:d},{1:d},{2:d},{3},{4},{5:d},{6}\n".format(d['year'],
+                                    d['month'],
+                                    d['day'],
+                                    d['fullname'],
+                                    d['nationality'],
+                                    d['double_nationality'],
+                                    occ)
+        csvstring = csvstring + line
+    return csvstring
+
 if __name__ == "__main__":
     # USE THE SCRIPT BY FOLLOWING THESE LINES
     # Uncomment the following to gather all wikipedia date pages
     # fetchallpages()
     # Uncomment the following line to parse all bdays
-    # getallbdays()
+    getallbdays()
     # Uncomment the following line to parse all bdays witl ml
     # getallbdays_ml()
 
     #USED FOR DEBUGGING ######################################################
-    bdays = getbdays(3,6)
-    print(len(bdays))
+    # print(parseline_ml("1976 - Matthew Hoggard, English cricketer",1,1))
 
-    for s in bdays:
-       print(s.strip().encode('utf-8'))
-       try:
-           print(parseline_ml(s, 3, 6))
-       except:
-           print(s.strip().encode('utf-8'))
+    # bdays = getbdays(3,6)
+    # print(len(bdays))
+    # print(is_nationality("german"))
+    # i = 25
+    # print(bdays[i].strip().encode('utf-8'))
+    # print(parseline_ml(bdays[i], 3, 6))
+    # for s in bdays:
+    #    print(s.strip().encode('utf-8'))
+    #    try:
+    #        print(parseline_ml(s, 3, 6))
+    #    except:
+    #        print(s.strip().encode('utf-8'))

@@ -1,0 +1,1673 @@
+actor
+puppeteer
+marionetteer
+actress
+actuary
+administrative worker
+worker
+administrator
+advertising manager
+manager
+aerial rigger
+adviser
+agronomist
+technician
+mechanic
+clerk
+agent
+animator
+anthropologist
+officer
+trainer
+instructor
+archeologist
+architect
+art critic
+historian
+glazier
+metalworker
+locksmith
+art photographer
+photographer
+art restorer
+legal assistant
+assessor
+astrologer
+astronomer
+athlete
+sportsman
+sportswoman
+auctioneer
+audio graphic designer
+graphic designer
+auditor
+auto-electrician
+baker
+bank clerk
+banking expert
+barber
+hairdresser
+barman
+barmaid
+bartender
+basket-maker
+weaver
+beautician
+beekeeper
+bibliographer
+biochemist
+biologist
+biotechnologist
+biscuit maker
+blacksmith
+farrier
+blasters foreman
+explosives expert
+blast-furnaceman
+boatmaboat
+woman
+bargee
+boiler operator
+boiler attendant
+boilermaker
+biolerfitter
+bookbinder
+bookkeeper
+bookmaker
+botanist
+brewer
+maltster
+bricklayer
+broadcaster
+announcer
+radio broadcaster
+telecaster
+brush-maker
+building electrician
+electrician
+inspector
+tinsmith
+civil engineer
+technologist
+butcher
+sausage-maker
+butler
+cab dispatcher
+taxi dispatcher
+cabinet maker
+cable car driver
+car driver
+driver
+camera mechanic
+camera operator
+camera crew
+cameraman
+captain
+career diplomat
+diplomat
+politician
+caretaker
+carpenter
+cartographer
+cellulose operator
+painter
+ceramicist
+potter
+ceramics
+pottery maker
+charter agent
+ship broker
+cheese maker
+researcher
+chemist	
+nurse
+chimney sweep
+choir master
+choir mistress
+choreographer
+circus artiste
+circus performer
+cleaner
+coffee roaster
+commentator
+reporter
+journalist
+commercial lawyer
+company lawyer
+composer
+computer engineer
+information technology engineer
+computer programmer
+concreter
+conductor
+confectioner
+conservator
+joiner
+cook
+craft ceramicist
+ceramicist
+gilder
+glass etcher
+glassmaker
+plasterer
+stonemason
+upholsterer
+driver
+criminal investigator
+croupier
+customs officer
+cutler
+dance teacher
+dance trainer
+dancer
+debt collector
+decorator
+dental nurse
+nurse
+dentist
+dental surgeon
+dietician
+digger
+director
+disc jockey
+dj
+washer
+dispatch clerk
+dispatcher
+diver
+dog trainer
+draughtsperson
+draughtsman
+draughtwoman
+dresser
+driller
+driving instructor
+ecologist
+environmentalist
+economist#
+editor
+electrician
+enamel worker
+ergonomist
+engineer	
+ethnographer
+faith healer
+farm worker
+farm labourer
+farmer
+fashion designer
+film critic
+film designer (film set designer)
+	
+
+film or videotape editor
+	
+
+film projectionist
+	
+
+financial analyst
+	
+
+financial officer
+	
+
+fine artist
+	
+
+fire officer
+	
+
+fire officer (firefighter)
+	
+
+fire prevention officer, fire inspector
+	
+
+fish farmer
+	
+
+fish warden (water keeper/bailiff)
+	
+
+fisherman
+	
+
+fitter (mechanic/fitter)
+	
+
+fitter of (scientific and industrial) glass instruments
+	
+
+fitter of gas pipelines (gas mains fitter)
+	
+
+fitter of steel structures
+	
+
+flight attendant (steward/ess, cabin staff)
+	
+
+flight engineer
+	
+
+floor fitter (floor layer)
+	
+
+flower, shrub or plant grower
+	
+
+flying instructor
+	
+
+food industry production manager
+	
+
+food industry technologist
+	
+
+foreign exchange clerk
+	
+
+foreign exchange clerk/teller (foreign exchange office clerk)
+	
+
+forester (forestry manager)
+	
+
+forester/forest manager
+	
+
+forestry machine operator
+	
+
+forestry worker
+	
+
+fortune teller
+	
+
+foster parent
+	
+
+foundry worker/foundry process operator / coremaker /patternmaker
+	
+
+fringe/trimmings maker
+	
+
+fruit farmer (fruit grower)
+	
+
+funeral service assistant (funeral service worker)
+	
+
+fur coat seamstress (fur coat sewer)
+	
+
+furnace operator
+	
+
+furrier
+|a |b |c |d |e |f |g |h |i |j |k |l |m |n |o |p |q |r |s |t |u |v |w |z
+g 	
+	
+
+gardener (market gardener)
+	
+
+gas industry inspector
+	
+
+general labourer - chemical industry (worker in the chemical industry)
+	
+
+general labourer - rubber and plastic manufacture (worker in rubber and plastic production)
+	
+
+general labourer in petroleum refineries (worker in oil processing)
+	
+
+geneticist
+	
+
+geographer
+	
+
+geological surveying equipment mechanic
+	
+
+geologist
+	
+
+geomechanic technician (mining)
+	
+
+geophysicist
+	
+
+glass decorator (glass engraver)
+	
+
+glass jewellery maker
+	
+
+glass making machine operator
+	
+
+glass melter
+	
+
+glass painter
+	
+
+glass production worker (worker in the glass industry)
+	
+
+glasscutter (glass grinder)
+	
+
+glassworker (glass worker)
+	
+
+glazier
+	
+
+goldsmith
+	
+
+government licensing officials (government licensing official)
+	
+
+graphic designer (graphic designer /audiovisual graphic designer)
+	
+
+gravedigger
+	
+
+guide
+	
+
+gunsmith
+|a |b |c |d |e |f |g |h |i |j |k |l |m |n |o |p |q |r |s |t |u |v |w |z
+h 	
+	
+
+hand embroiderer
+	
+
+hand lacemaker
+	
+
+harbour guard
+	
+
+hardener
+	
+
+harpooner
+	
+
+hatter (hat maker)
+	
+
+heating and ventilating fitter (air-conditioning fitter)
+	
+
+heating engineer (heating and ventilating engineer)
+	
+
+herbalist
+	
+
+high-rise work specialist (steeplejack)
+	
+
+historian
+	
+
+historical monuments administrator /custodian (warden of a historic building)
+	
+
+horse breeder (horse breeder and trainer)
+	
+
+host (hostess)
+	
+
+hotel porter
+	
+
+hotel receptionist (receptionist)
+	
+
+hydrologist
+|a |b |c |d |e |f |g |h |i |j |k |l |m |n |o |p |q |r |s |t |u |v |w |z
+i 	
+	
+
+ice-cream maker
+	
+
+image consultant
+	
+
+industrial designer (wood and furniture industry)
+	
+
+information assistant/officer in rail transport
+	
+
+information assistant/receptionist
+	
+
+inspector of telecommunications equipment (inspector of telecommunications)
+	
+
+insulation worker (insulator)
+	
+
+insurance clerk
+	
+
+insurance sales person, collector, and insurance underwriter
+	
+
+interior designer interior designer
+	
+
+interpreter and translator
+	
+
+investment clerk
+	
+
+invoice clerk
+|a |b |c |d |e |f |g |h |i |j |k |l |m |n |o |p |q |r |s |t |u |v |w |z
+j 	
+	
+
+jeweller (manufacturing or retail)/goldsmith and silversmith/jewellery designer
+	
+
+jewellery maker
+	
+
+joiner and cabinetmaker (joiner)
+	
+
+judge
+|a |b |c |d |e |f |g |h |i |j |k |l |m |n |o |p |q |r |s |t |u |v |w |z
+k 	
+	
+
+keeper of records (archivist)
+	
+
+keeper of service animals
+	
+
+knitter
+|a |b |c |d |e |f |g |h |i |j |k |l |m |n |o |p |q |r |s |t |u |v |w |z
+l 	
+	
+
+land surveyor
+	
+
+landscape architect
+	
+
+laundry worker & dry-cleaner (laundry and dry cleaning operative )
+	
+
+laundry worker (dry cleaning worker)
+	
+
+lecturer (higher education)
+	
+
+lecturer in vocational courses
+	
+
+lecturer/researcher in linguistics
+	
+
+librarian (librarian/information scientist )
+	
+
+lifeguard (swimming instructor)
+	
+
+lift attendant
+	
+
+lift fitter
+	
+
+lighting technician
+	
+
+lightning conductor fitter (fitter of lightning conductors)
+	
+
+lithographer
+	
+
+livestock farmer
+	
+
+lottery ticket street vendor
+|a |b |c |d |e |f |g |h |i |j |k |l |m |n |o |p |q |r |s |t |u |v |w |z
+m 	
+	
+
+machine shop worker (worker in a metal works)
+	
+
+machinery inspector
+	
+
+maker of non-woven textiles
+	
+
+make-up artist and wigmaker
+	
+
+management accountant
+	
+
+management consultant
+	
+
+manager
+	
+
+manager/supervisor for shopping, accommodation or food-service units (catering manager)
+	
+
+marine engineer (ship's engineer and machine operator)
+	
+
+marine hotel manager
+	
+
+marketing manager
+	
+
+masseur/masseuse
+	
+
+master of ceremonies
+	
+
+materials handler
+	
+
+mathematician
+	
+
+medical laboratory assistant (medical laboratory technician)
+	
+
+mechanic - measuring, controlling and automated systems (measurement and control technician )
+	
+
+mechanic (service mechanic)
+	
+
+mechanical engineering designer
+	
+
+mechanical engineering production manager
+	
+
+mechanical engineering technologist
+	
+
+mechatronic engineer
+	
+
+metal engraver
+	
+
+metal grinder
+	
+
+metal refiner
+	
+
+metal turner
+	
+
+metal worker / Steelworker (Foundry Worker )
+	
+
+metallurgist (materials technician)
+	
+
+metallurgist of nonferrous metals
+	
+
+meteorologist
+	
+
+metrologist
+	
+
+microbiologist
+	
+
+midwife
+	
+
+miller
+	
+
+milling-machine operator
+	
+
+mine rescue service mechanic
+	
+
+mine ventilation technician (mine ventilation engineer)
+	
+
+miner
+	
+
+mining air control technician
+	
+
+mining electrician - heavy-current equipment (mining electrician of heavy-current equipment)
+	
+
+mining finisher (mining dresser)
+	
+
+mining machine operator
+	
+
+mining mechanic (mining fitter)
+	
+
+mining rescue worker (mining rescuer)
+	
+
+mining/minerals surveyor
+	
+
+model/ fashion model, photographic model
+	
+
+modeller (model maker)
+	
+
+motor vehicle bodybuilder/repairer
+	
+
+mountain guide
+	
+
+multimedia designer
+	
+
+multimedia programmer (web site designer)
+	
+
+municipal police officer (policeman/woman)
+	
+
+municipal services worker (communal service worker)
+	
+
+municipal street cleaner (communal cleaning worker)
+	
+
+museum/art gallery curator
+	
+
+music director
+	
+
+musical instrument mechanic (musical instrument technician)
+	
+
+musician
+	
+
+musicologist
+|a |b |c |d |e |f |g |h |i |j |k |l |m |n |o |p |q |r |s |t |u |v |w |z
+n 	
+	
+
+nanny /nursery nurse
+	
+
+naturalist/nature guide (reserve warden)
+	
+
+newspaper editor/ sub-editor (journalist)
+	
+
+nuclear power station operator
+	
+
+nurse (general medicine, paediatric, obstetric)
+	
+
+nursery school teacher (nursery teacher)
+	
+
+nutritionist
+|a |b |c |d |e |f |g |h |i |j |k |l |m |n |o |p |q |r |s |t |u |v |w |z
+o 	
+	
+
+office junior
+	
+
+on-line customer services operator
+	
+
+operational analyst/researcher
+	
+
+operations electrician for heavy-current equipment (heavy-current appliance electrician)
+	
+
+operations mechanic (plant fitter)
+	
+
+operative - food processing (food processing operator)
+	
+
+operative in chemical and synthetic fibre manufacture
+	
+
+operator in the tobacco industry
+	
+
+operator of gas plant equipment (gasworks equipment operator)
+	
+
+operator of numerically controlled machine tools
+	
+
+operator of plastic material processing machines (plastics process operative)
+	
+
+optical component maker / lens grinder
+	
+
+optical instrument mechanic
+	
+
+ore crusher (smelting and refinery)
+	
+
+orthopaedic shoemaker (orthopaedic bootmaker)
+	
+
+orthotic/prosthetic technician
+	
+
+orthotist/prosthetist
+	
+
+out-of-school educator
+	
+
+overhead telecommunications cable fitter
+|a |b |c |d |e |f |g |h |i |j |k |l |m |n |o |p |q |r |s |t |u |v |w |z
+p 	
+	
+
+packer
+	
+
+paediatrician
+	
+
+palmists
+	
+
+paper worker
+	
+
+paramedic (ambulance worker)
+	
+
+patent agent
+	
+
+paver - asphalt layer (road worker)
+	
+
+pawnbroker
+	
+
+pedicurist, manicurist (pedicurist-manicurist)
+	
+
+personnel officer
+	
+
+pest control officer
+	
+
+petroleum and petrochemical process operators
+	
+
+pharmaceutical industry operative (pharmaceutical operator)
+	
+
+pharmaceutical laboratory technician (pharmaceutical laboratory assistant)
+	
+
+pharmacist
+	
+
+philosopher
+	
+
+photographer
+	
+
+photographic reporter (press photographer)
+	
+
+physicist
+	
+
+physiotherapist
+	
+
+piano tuner
+	
+
+pilot (harbours and ports)
+	
+
+pilot[aircraft]
+	
+
+pipe fitter
+	
+
+pipe fitter
+	
+
+pizza maker
+	
+
+plumber
+	
+
+plywood maker
+	
+
+police assistant (police clerk)
+	
+
+police investigator (detective)
+	
+
+police officer/inspector
+	
+
+political scientist
+	
+
+pollster
+	
+
+post office counter clerk
+	
+
+postal service worker
+	
+
+postal transport worker
+	
+
+postal worker (postman/woman)
+	
+
+postmaster/postmistress
+	
+
+poultry breeder (poultry farmer)
+	
+
+poultry butcher (poulterer)
+	
+
+powder metallurgist
+	
+
+power engineering specialist
+	
+
+power station supervisor
+	
+
+power station/systems operator (energy s equipment operator)
+	
+
+power system worker (worker in the electrical energy industry)
+	
+
+power truck driver
+	
+
+prefab construction worker
+	
+
+press officer/public relations officer
+	
+
+pricing officer
+	
+
+priest/minister of religion (clergyman/woman)
+	
+
+primary school teacher
+	
+
+printer
+	
+
+printing machine mechanic
+	
+
+printing technician
+	
+
+prison guard / prison officer
+	
+
+private detective
+	
+
+producer
+	
+
+producer of leather goods/ leather goods worker
+	
+
+product designer (industrial designer)
+	
+
+production manager (electronic appliances)
+	
+
+production manager in glass and ceramics
+	
+
+production manager in textile industry
+	
+
+production manager in wood industry
+	
+
+production technologist (electronic appliances)/electronic appliance production technologist
+	
+
+professional soldier
+	
+
+prompter
+	
+
+property manager
+	
+
+props master (properties staff member)
+	
+
+psychiatrist
+	
+
+psychologist
+	
+
+psychotherapist
+	
+
+public administration officer
+	
+
+public notary
+	
+
+public relations manager
+	
+
+publican (landlord/landlady)
+	
+
+publisher
+	
+
+purchasing officer/buyer/merchandiser
+|a |b |c |d |e |f |g |h |i |j |k |l |m |n |o |p |q |r |s |t |u |v |w |z
+q 	
+	
+
+quality control technician (technologist)/non-destructive testing (ndt) technician
+	
+
+quality inspector
+|a |b |c |d |e |f |g |h |i |j |k |l |m |n |o |p |q |r |s |t |u |v |w |z
+r 	
+	
+
+radio and tv technician
+	
+
+radio and tv transmission engineering technician
+	
+
+radio officer/operator (merchant navy)
+	
+
+radiographer/radiotherapist
+	
+
+rail transport worker
+	
+
+rail vehicle mechanic
+	
+
+railway carriage and wagon inspector
+	
+
+railway electrician (rail transport electrician)
+	
+
+railway engine mechanic
+	
+
+railway freight handler
+	
+
+railway guard (guard)
+	
+
+railway operative (railway administrative worker )
+	
+
+railway ticket/booking office clerk (booking office clerk/ticket office clerk)
+	
+
+railway track construction fitter
+	
+
+railway yard worker
+	
+
+real estate agent (estate agent)
+	
+
+referee (umpire)
+	
+
+refrigeration engineer (refrigeration mechanic )
+	
+
+refuse collector
+	
+
+registrar
+	
+
+removal worker /furniture removal worker
+	
+
+reproduction technician/photographer
+	
+
+restorer of applied arts and crafts
+	
+
+retoucher
+	
+
+river basin keeper (river manager)
+	
+
+road sign assistant (road sign keeper)
+	
+
+road transport technician
+	
+
+rolling-mill operator (rolling-mill worker)
+	
+
+roofer (roof tiler or slater)
+	
+
+room maid (chambermaid/cleaning staff)
+	
+
+rope maker
+	
+
+rotating machine fitter
+	
+
+rubber operator (rubber process operative)
+	
+
+rubber processing machine operator/ tyrefitter
+|a |b |c |d |e |f |g |h |i |j |k |l |m |n |o |p |q |r |s |t |u |v |w |z
+s 	
+	
+
+safety and communication electrician
+	
+
+safety engineer
+	
+
+safety, health and quality inspectors, health and safety inspectors
+	
+
+sales assistant (salesperson)
+	
+
+sales manager
+	
+
+sales representative (commercial traveller)
+	
+
+scaffolder
+	
+
+scene painter
+	
+
+scene-shifter
+	
+
+script editor
+	
+
+script writer (scriptwriter)
+	
+
+sculptor
+	
+
+seaman/woman (merchant navy) rating
+	
+
+secondary school teacher
+	
+
+secretary (secretary, personal assistant)
+	
+
+section supervisor (mines and quarries)
+	
+
+security guard
+	
+
+service mechanic/ repairer
+	
+
+sewerage system cleaning operator (sewerage cleaner)
+	
+
+sewing machinist
+	
+
+shepherd, goatherd
+	
+
+shift engineer
+	
+
+ship fitter /shipwright
+	
+
+ship's captain
+	
+
+ship's officer
+	
+
+shoemaker (cobbler)
+	
+
+shop cashier (shop cashier/checkout operator)
+	
+
+shunter
+	
+
+shunting team manager
+	
+
+school caretaker
+	
+
+school inspector
+	
+
+silkworm breeder, sericulturist
+	
+
+singer
+	
+
+smith
+	
+
+social worker
+	
+
+sociologist
+	
+
+solicitor
+	
+
+songwriter
+	
+
+sound effects technician
+	
+
+sound engineer
+	
+
+spa resort attendant (baths assistant)
+	
+
+special educational needs teacher
+	
+
+special effects engineer (special effects engineer)
+	
+
+special needs teacher (learning/behavioural difficulties)
+	
+
+specialist in animal husbandry (livestock specialist)
+	
+
+spectacle frame maker
+	
+
+speech therapist
+	
+
+spinner
+	
+
+stable hand, groom
+	
+
+stage costume maker
+	
+
+stage designer / theatre designer
+	
+
+stage manager
+	
+
+standards engineer
+	
+
+state attorney (public prosecutor)
+	
+
+station manager
+	
+
+statistician
+	
+
+stockbroker
+	
+
+stonemason, stonecutter (stonemason)
+	
+
+storekeeper (warehouse keeper)
+	
+
+stove fitter
+	
+
+stuntman (stuntwoman)
+	
+
+sugar-maker (sugar maker)
+	
+
+surgical toolmaker (surgery toolmaker)
+	
+
+surveyor's assistant/helper
+	
+
+sweet factory worker (sweet maker)
+	
+
+systems designer (systems analyst)
+	
+
+systems engineer (manufacturing)
+|a |b |c |d |e |f |g |h |i |j |k |l |m |n |o |p |q |r |s |t |u |v |w |z
+t 	
+	
+
+tailor, dressmaker (tailor and dressmaker)
+	
+
+tamer (lion tamer)
+	
+
+tanner
+	
+
+tannery worker
+	
+
+tax specialist, tax adviser/consultant
+	
+
+technical editor
+	
+
+technologist in glass and ceramics
+	
+
+telecommunications cable fitter
+	
+
+telecommunications dispatcher (controller of telecommunications operation)
+	
+
+telecommunications engineer
+	
+
+telecommunications installation and repair technician
+	
+
+telecommunications mechanic (telecommunications technician)
+	
+
+telecommunications technician
+	
+
+telecommunications worker
+	
+
+telephone/switchboard operator
+	
+
+teller
+	
+
+textile printer
+	
+
+textile refiner
+	
+
+textile technologist
+	
+
+textiles dyer
+	
+
+the doctor (doctor)
+	
+
+the hygiene service assistant (hygiene service assistant)
+	
+
+the medical orderly (nursing auxiliary/health care assistant)
+	
+
+the optician (optometrist)
+	
+
+ticket collector/inspector
+	
+
+tinsmith
+	
+
+tobacco technologist
+	
+
+tool setter (machine-tool setter)
+	
+
+tool-maker (toolmaker)
+	
+
+town planner
+	
+
+track engineer
+	
+
+tracklayer
+	
+
+tractor-driver
+	
+
+trading standards officer/weights and measures inspector
+	
+
+traffic police officer (motor patrolman/woman)
+	
+
+train dispatcher
+	
+
+train driver (engine driver)
+	
+
+trainee/apprentice chef
+	
+
+trainer (sports)/coach
+	
+
+trainman/woman
+	
+
+tram driver
+	
+
+transport supervisor (transportation supervisor)
+	
+
+travel agency clerk
+	
+
+travel courier (tourist guide)
+	
+
+tunneller (tunnel builder)
+	
+
+tutor/ governess (home tutor)
+	
+
+typesetter
+|a |b |c |d |e |f |g |h |i |j |k |l |m |n |o |p |q |r |s |t |u |v |w |z
+u 	
+	
+
+underground mine safety engineer (deep-mining safety engineer)
+	
+
+upholsterer and decorator (upholsterer)
+	
+
+usher/usherette
+|a |b |c |d |e |f |g |h |i |j |k |l |m |n |o |p |q |r |s |t |u |v |w |z
+v 	
+	
+
+valuer
+	
+
+varnisher (painter-varnisher)
+	
+
+veterinary surgeon
+	
+
+veterinary technician (animal nurse)/veterinary assistant
+	
+
+viniculturist (wine-grower)
+|a |b |c |d |e |f |g |h |i |j |k |l |m |n |o |p |q |r |s |t |u |v |w |z
+w 	
+	
+
+wages clerk
+	
+
+waiter (waitress)
+	
+
+wardrobe master/mistress
+	
+
+warehouse clerk
+	
+
+waste incineration plant worker
+	
+
+water management controller (water supply and distribution manager)
+	
+
+water supply and distribution equipment operator
+	
+
+water treatment plant operator / water meter reader
+	
+
+watercourse manager (river administrator)
+	
+
+watch-maker (watchmaker)
+	
+
+watchman (watchwoman)/security guard
+	
+
+weaver
+	
+
+weaver (hand weaver)
+	
+
+weigher
+	
+
+weir and dam operator
+	
+
+welding operator (welder)
+	
+
+well digger
+	
+
+whaler
+	
+
+window cleaner
+	
+
+window-dresser
+	
+
+winery worker/wine maker
+	
+
+wire-drawer
+	
+
+wood carver
+	
+
+wood industry technologist
+	
+
+woodcutting manager
+	
+
+woodworking operator (wood machinist)
+	
+
+work study engineer/organisation and methods officer (electronic appliances)
+	
+
+work study/organisation and methods officer (glass and ceramics)
+	
+
+work study/organisation and methods officer (mechanical engineering)
+	
+
+work study/organisation and methods officer (textile industry)
+	
+
+work study/organisation and methods officer (wood and furniture industry)
+	
+
+worker in electrical engineering production
+	
+
+worker in gas distribution
+	
+
+worker in pressing and stamping shops
+	
+
+worker in recycling services (worker at household waste recycling site)
+	
+
+worker in shoe production (worker in footwear production)
+	
+
+worker in the food industry (worker in food industry)
+	
+
+worker in the paper industry
+	
+
+worker in the production of building materials
+	
+
+worker the in fur processing industry
+	
+
+worker, metal industry (foundry worker)
+|a |b |c |d |e |f |g |h |i |j |k |l |m |n |o |p |q |r |s |t |u |v |w |z
+z 	
+	
+
+zookeeper
+	
+		
+	
