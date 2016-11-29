@@ -9,6 +9,11 @@ This was a project that I've done previously with PHP. Here, I develop the same 
 # Update 1
 * Implemented **machine learning** to guess the nationality but first looks at the nationality table.
 
+# Update 2
+* Removed **machine learning** part because it is useless.
+* Failed cases reduced almost 50%
+* Correctly handles most of the nationalities.
+
 # Issues
 * For now, there is a very crude extraction method for names, nationalities
   and occupations. Each line should be in a certain format or it will be ignored.

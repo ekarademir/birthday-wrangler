@@ -45,7 +45,7 @@ Canadian
 CapeVerdean
 Catalan
 Caribbean
-CentralAfrican
+Central_African
 Chadian
 Chilean
 Chinese
@@ -53,7 +53,7 @@ Colombian
 Comoran
 Congolese
 Congolese
-CostaRican
+Costa_Rican
 Croatian
 Cuban
 Curaçaoan
@@ -66,13 +66,13 @@ Dominican
 Dutch
 Dutchman
 Dutchwoman
-EastTimorese
+East_Timorese
 Ecuadorean
 Egyptian
 Emirian
 Emirati
 English
-EquatorialGuinean
+Equatorial_Guinean
 Eritrean
 Estonian
 Ethiopian
@@ -90,12 +90,12 @@ Ghanaian
 Greek
 Grenadian
 Guatemalan
-Guinea-Bissauan
+Guinea_Bissauan
 Guinean
 Guyanese
 Haitian
 Herzegovinian
-HongKong
+Hong_Kong
 Honduran
 Hungarian
 I-Kiribati
@@ -153,21 +153,21 @@ Namibian
 Nauruan
 Nepalese
 Netherlander
-NewZealander
-NewZealand
+New_Zealander
+New_Zealand
 Ni-Vanuatu
 Nicaraguan
 Nigerian
 Nigerien
-NorthKorean
-NorthernIrish
+North_Korean
+Northern_Irish
 Norwegian
 Omani
 Ottoman
 Pakistani
 Palauan
 Panamanian
-Papua New Guinean
+Papua_New_Guinean
 Paraguayan
 Peruvian
 Polish
@@ -178,10 +178,10 @@ Roman
 Romanian
 Russian
 Rwandan
-SaintLucian
+Saint_Lucian
 Salvadoran
 Samoan
-San Marinese
+San_Marinese
 Sao Tomean
 Saudi
 Scottish
@@ -196,10 +196,10 @@ Slovenian
 Solomon Islander
 Somali
 Somalian
-SouthAfrican
-SouthKorean
+South_African
+South_Korean
 Spanish
-SriLankan
+Sri_Lankan
 Sudanese
 Surinamer
 Swazi

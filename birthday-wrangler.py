@@ -208,20 +208,23 @@ def occupations(occupationpart):
 def parse_name_nationality_occupation(rest):
 
     twowordnats = {
-                    "cape verdean":"capeverdean",
-                    "central african": "centralafrican",
-                    "east timorese": "easttimorese",
-                    "equatorial guinean": "equatorialguinean",
-                    "new zealander": "newzealander",
-                    "new zealand": "newzealand",
-                    "north korean": "northkorean",
-                    "south korean": "southkorean",
-                    "northern irish": "northernirish",
-                    "south african": "southafrican",
-                    "sri lankan": "srilankan",
-                    "hong kong": "hongkong",
-                    "saint lucian": "saintlucian",
-                    "costa rican": "costarican",
+                    "cape verdean":"cape_verdean",
+                    "central african": "central_african",
+                    "east timorese": "east_timorese",
+                    "equatorial guinean": "equatorial_guinean",
+                    "new zealander": "new_zealander",
+                    "new zealand": "new_zealand",
+                    "north korean": "north_korean",
+                    "south korean": "south_korean",
+                    "northern irish": "northern_irish",
+                    "south african": "south_african",
+                    "sri lankan": "sri_lankan",
+                    "hong kong": "hong_kong",
+                    "saint lucian": "saint_lucian",
+                    "costa rican": "costa_rican",
+                    "guinea bissauan": "guinea_bissauan",
+                    "papua new guinean": "papua_new_guinean",
+                    "san marinese": "san_marinese",
                   }
 
     for key, value in twowordnats.items():
@@ -425,9 +428,9 @@ if __name__ == "__main__":
     # Uncomment the following to gather all wikipedia date pages
     # fetchallpages()
     # Uncomment the following line to parse all bdays
-    getallbdays()
+    # getallbdays()
     # Uncomment the following line to parse all bdays witl ml
-    # getallbdays_ml()
+    getallbdays_ml()
 
     #USED FOR DEBUGGING ######################################################
     # print(parseline_ml("1976 - Matthew Hoggard, English cricketer",1,1))

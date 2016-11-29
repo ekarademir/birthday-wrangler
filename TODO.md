@@ -1,6 +1,7 @@
 # URGENT
 
 ## Line parsing
+* BC Dates raise error
 * No typo handling is being done
 * "Royalty of Country" cases are not handled
 
