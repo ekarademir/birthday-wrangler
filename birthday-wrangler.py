@@ -309,7 +309,7 @@ def getallbdays():
     # Open up the file to write csv
     csvfile = u'./data-wikibdays-occupations.csv'
     csvf = codecs.open(csvfile,'w','utf-8')
-    csvf.write(u'year,month,day,fullname,nationality,occupation\n')
+    csvf.write(u'i_year,i_month,i_day,s_fullname,s_nationality,s_occupation\n')
     successes = 0
 
     months = [31, 29, 31,   # January, February, March
