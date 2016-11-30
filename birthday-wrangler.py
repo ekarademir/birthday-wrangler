@@ -176,16 +176,46 @@ def guess_nationality(test):
     return bool(clf.predict(X))
 
 def is_nationality(test):
-    """Test id a word is a nationality adjective"""
+    """Test if a word is a nationality adjective"""
 
     with codecs.open("nationalities.txt", "r", "utf-8") as f:
-        nationalities = list(map(lambda x: x.strip().lower(), f.readlines()))
+        nationalities = list(map(lambda x: x.strip().lower().split(',')[0], f.readlines()))
 
     # First check the list. If not guess.
     if test in nationalities:
         return True
     else:
         return False#guess_nationality(test)
+
+def get_nation(nationality):
+    """Test id a word is a nationality adjective"""
+
+    with codecs.open("nationalities.txt", "r", "utf-8") as f:
+        nationalities = {}
+        for x in f.readlines():
+            nationalities[x.strip().lower().split(',')[0]] = x.strip().lower().split(',')[1]
+
+    result = nationality[:-2]
+    for key,val in nationalities.items():
+        if nationality == key:
+            result = val
+
+    return result
+
+def get_nationality(nation):
+    """Test id a word is a nationality adjective"""
+
+    with codecs.open("nationalities.txt", "r", "utf-8") as f:
+        nationalities = {}
+        for x in f.readlines():
+            nationalities[x.strip().lower().split(',')[1]] = x.strip().lower().split(',')[0]
+
+    result = nation
+    for key,val in nationalities.items():
+        if nation == key:
+            result = val
+
+    return result
 
 def occupations(occupationpart):
     """Parses occupations"""
@@ -225,6 +255,7 @@ def parse_name_nationality_occupation(rest):
                     "guinea bissauan": "guinea_bissauan",
                     "papua new guinean": "papua_new_guinean",
                     "san marinese": "san_marinese",
+                    "sierra_leonean": "sierra_leonean",
                   }
 
     for key, value in twowordnats.items():
@@ -277,6 +308,8 @@ def parseline_ml(line, month, day):
     """Parse the line and return a dictionary for the data.
     line must be a string."""
 
+    # print(line)
+
     # For now lines without proper format are ignored
     if not u'-' in line:
         raise ValueError
@@ -286,8 +319,45 @@ def parseline_ml(line, month, day):
     # Split from date dash
     line = [k.strip().lower() for k in line.split(u'-',1)]
 
-    year = int(line[0])
+    year = line[0]
+
+    # Handle BC
+    year = year.lower()
+    if 'bc' in year:
+        year = -1*int(year.replace('bc','').strip())
+    else:
+        year = int(year)
+
     fullname, nationality, double_nationality, occupation = parse_name_nationality_occupation(line[1])
+
+    # print(nationality)
+    # handle royalty
+    if nationality == None:
+        if 'of' in fullname:
+            fn = fullname.split('of')
+            fullname = fn[0].strip()
+            nation = fn[1].strip()
+            return {
+                'year': year,
+                'month': month,
+                'day': day,
+                'fullname': fullname,
+                'nationality': get_nationality(nation.strip()),
+                'nation': nation,
+                'double_nationality': False,
+                'occupation': ["royalty"]
+            }
+        else:
+            return {
+                'year': year,
+                'month': month,
+                'day': day,
+                'fullname': fullname,
+                'nationality': "world citizen",
+                'nation': "world",
+                'double_nationality': False,
+                'occupation': ["royalty"]
+            }
 
     return {
         'year': year,
@@ -295,6 +365,7 @@ def parseline_ml(line, month, day):
         'day': day,
         'fullname': fullname,
         'nationality': nationality,
+        'nation': get_nation(nationality.strip()),
         'double_nationality': double_nationality,
         'occupation': occupation
     }
@@ -433,7 +504,9 @@ if __name__ == "__main__":
     getallbdays_ml()
 
     #USED FOR DEBUGGING ######################################################
-    # print(parseline_ml("1976 - Matthew Hoggard, English cricketer",1,1))
+    # print(parseline_ml("711 BC - Emperor Jimmu of Japan",1,1))
+    # print(parseline_ml("1466 - Elizabeth of York",1,1))
+    # print(parseline_ml("1322 - John Henry, Margrave of Moravia,",1,1))
 
     # bdays = getbdays(3,6)
     # print(len(bdays))
